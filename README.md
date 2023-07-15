@@ -32,7 +32,7 @@ Checks first if auth header is present or not. Then Checks for if the body schem
 
 ### How to Test
 1) In folder run npm i first & run nodemon app.js
-2) hit [http://localhost:8000](https://intersection-point-production.up.railway.app/api/points)/api/points endpoint on postman
+2) hit https://intersection-point-production.up.railway.app/api/points/api/points endpoint on postman
 3) Enter the required Header and a valid body containing LineString(JSON)
 
 

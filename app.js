@@ -1,18 +1,15 @@
-const express = require('express');
-const bodyParser = require('body-parser');
+const express = require("express");
+const bodyParser = require("body-parser");
 
-
-const pointRoutes = require('./routes/points');
-
+const pointRoutes = require("./routes/points");
 
 const app = express();
+const port = process.env.PORT || 8000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use("/api", pointRoutes);
 
-app.use('/api', pointRoutes);
-
-
-app.listen(8000, () => {
-    console.log('listening at port 8000')
+app.listen(port, () => {
+  console.log(`listening at port at ${port}`);
 });
